@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas Rápidas em 15 Minutos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+        .recipe-card { transition: all 0.3s ease; }
+        .recipe-card:hover { transform: translateY(-5px); }
+        .chapter-nav { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-orange-50 to-red-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-orange-500 to-red-500 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">🍳 Receitas Rápidas em 15 Minutos</h1>
+            <p class="text-xl opacity-90">30 Opções Fáceis para o Dia a Dia</p>
+            <p class="text-lg mt-2 opacity-80">Para pessoas ocupadas, universitários e solteiros</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <button onclick="scrollToSection('intro')" class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full hover:bg-orange-200 transition">Introdução</button>
+                <button onclick="scrollToSection('tecnicas')" class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full hover:bg-orange-200 transition">Técnicas</button>
+                <button onclick="scrollToSection('cafe')" class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full hover:bg-orange-200 transition">Café da Manhã</button>
+                <button onclick="scrollToSection('almoco')" class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full hover:bg-orange-200 transition">Almoços</button>
+                <button onclick="scrollToSection('lanches')" class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full hover:bg-orange-200 transition">Lanches</button>
+                <button onclick="scrollToSection('jantar')" class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full hover:bg-orange-200 transition">Jantares</button>
+                <button onclick="scrollToSection('sobremesas')" class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full hover:bg-orange-200 transition">Sobremesas</button>
+                <button onclick="scrollToSection('kit')" class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full hover:bg-orange-200 transition">🛍️ Kit Recomendado</button>
+                <button onclick="scrollToSection('dicas')" class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full hover:bg-orange-200 transition">Dicas</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-6 py-8">
+        <!-- Introdução -->
+        <section id="intro" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span class="text-4xl mr-3">⚡</span> Introdução
+                </h2>
+                <div class="prose max-w-none text-gray-700 leading-relaxed">
+                    <p class="text-lg mb-4">Bem-vindo ao mundo das receitas rápidas! Este ebook foi criado especialmente para você que tem uma rotina corrida mas não quer abrir mão de refeições saborosas e nutritivas.</p>
+                    
+                    <h3 class="text-xl font-semibold text-orange-600 mb-3">🎯 Benefícios de Cozinhar Rápido:</h3>
+                    <ul class="grid md:grid-cols-2 gap-3 mb-6">
+                        <li class="flex items-center bg-green-50 p-3 rounded-lg">
+                            <span class="text-green-500 mr-2">💰</span> Economia de dinheiro
+                        </li>
+                        <li class="flex items-center bg-blue-50 p-3 rounded-lg">
+                            <span class="text-blue-500 mr-2">⏰</span> Mais tempo livre
+                        </li>
+                        <li class="flex items-center bg-purple-50 p-3 rounded-lg">
+                            <span class="text-purple-500 mr-2">🥗</span> Alimentação mais saudável
+                        </li>
+                        <li class="flex items-center bg-yellow-50 p-3 rounded-lg">
+                            <span class="text-yellow-500 mr-2">🎨</span> Desenvolvimento de habilidades
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Técnicas -->
+        <section id="tecnicas" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span class="text-4xl mr-3">⚡</span> Técnicas para Agilizar o Preparo
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-orange-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">🥕 Mise en Place</h4>
+                            <p class="text-sm text-gray-600">Prepare todos os ingredientes antes de começar a cozinhar</p>
+                        </div>
+                        <div class="border-l-4 border-blue-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">🔥 Cozimento Simultâneo</h4>
+                            <p class="text-sm text-gray-600">Use várias bocas do fogão ao mesmo tempo</p>
+                        </div>
+                        <div class="border-l-4 border-green-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">❄️ Ingredientes Pré-processados</h4>
+                            <p class="text-sm text-gray-600">Use vegetais congelados e temperos prontos</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="border-l-4 border-purple-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">📱 Timer é Seu Amigo</h4>
+                            <p class="text-sm text-gray-600">Use o cronômetro para não queimar nada</p>
+                        </div>
+                        <div class="border-l-4 border-red-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">🍽️ One-Pot Meals</h4>
+                            <p class="text-sm text-gray-600">Pratos feitos em uma panela só</p>
+                        </div>
+                        <div class="border-l-4 border-yellow-500 pl-4">
+                            <h4 class="font-semibold text-gray-800">🧊 Batch Cooking</h4>
+                            <p class="text-sm text-gray-600">Prepare grandes quantidades no fim de semana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Café da Manhã -->
+        <section id="cafe" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span class="text-4xl mr-3">🌅</span> Café da Manhã Rápido (5 receitas)
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="recipe-card bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-xl border border-yellow-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🥞 Panqueca de Caneca</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 3 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 3 colheres (sopa) de farinha de trigo</li>
+                                <li>• 1 ovo</li>
+                                <li>• 3 colheres (sopa) de leite</li>
+                                <li>• 1 colher (chá) de açúcar</li>
+                                <li>• 1 pitada de sal</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Pegue uma caneca grande (pelo menos 300ml)</li>
+                                <li>2. Quebre o ovo dentro da caneca</li>
+                                <li>3. Adicione o leite e misture bem com um garfo</li>
+                                <li>4. Acrescente a farinha, açúcar e sal</li>
+                                <li>5. Misture até ficar homogêneo (sem grumos)</li>
+                                <li>6. Leve ao microondas por 1min30s a 2min</li>
+                                <li>7. Sirva com mel, geleia ou frutas</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-green-50 to-blue-50 p-6 rounded-xl border border-green-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🥑 Torrada de Abacate</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 5 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 2 fatias de pão integral</li>
+                                <li>• 1 abacate maduro</li>
+                                <li>• Sal a gosto</li>
+                                <li>• Pimenta-do-reino a gosto</li>
+                                <li>• 1 colher (chá) de azeite</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Coloque as fatias de pão na torradeira</li>
+                                <li>2. Corte o abacate ao meio e retire o caroço</li>
+                                <li>3. Com uma colher, retire a polpa do abacate</li>
+                                <li>4. Amasse bem com um garfo até virar pasta</li>
+                                <li>5. Tempere com sal e pimenta</li>
+                                <li>6. Espalhe sobre o pão torrado</li>
+                                <li>7. Regue com azeite e sirva</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🥣 Overnight Oats</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 2 minutos (prep na noite anterior)</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 1/2 xícara de aveia em flocos</li>
+                                <li>• 1/2 xícara de leite (qualquer tipo)</li>
+                                <li>• 1 colher (sopa) de mel</li>
+                                <li>• Frutas picadas (banana, morango, etc)</li>
+                                <li>• 1 colher (chá) de chia (opcional)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Em um pote de vidro, coloque a aveia</li>
+                                <li>2. Adicione o leite e misture bem</li>
+                                <li>3. Acrescente o mel e misture novamente</li>
+                                <li>4. Se usar chia, adicione agora</li>
+                                <li>5. Tampe o pote e leve à geladeira</li>
+                                <li>6. Deixe descansar a noite toda (8h)</li>
+                                <li>7. De manhã, adicione as frutas e coma</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-xl border border-red-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🍳 Ovo Mexido Express</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 4 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 2 ovos</li>
+                                <li>• 2 colheres (sopa) de leite</li>
+                                <li>• Sal a gosto</li>
+                                <li>• Pimenta-do-reino a gosto</li>
+                                <li>• 2 colheres (sopa) de queijo ralado</li>
+                                <li>• 1 colher (chá) de manteiga</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Quebre os ovos em uma tigela</li>
+                                <li>2. Adicione o leite, sal e pimenta</li>
+                                <li>3. Bata bem com um garfo até misturar</li>
+                                <li>4. Aqueça a manteiga na frigideira em fogo baixo</li>
+                                <li>5. Despeje os ovos batidos na frigideira</li>
+                                <li>6. Mexa constantemente com uma espátula</li>
+                                <li>7. Quando estiver quase pronto, adicione o queijo</li>
+                                <li>8. Retire do fogo e sirva imediatamente</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🥤 Smoothie Energético</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 3 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 1 banana madura</li>
+                                <li>• 1 xícara de leite gelado</li>
+                                <li>• 1 colher (sopa) de aveia em flocos</li>
+                                <li>• 1 colher (sopa) de mel</li>
+                                <li>• 3 cubos de gelo</li>
+                                <li>• Canela em pó (opcional)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Descasque e corte a banana em pedaços</li>
+                                <li>2. Coloque todos os ingredientes no liquidificador</li>
+                                <li>3. Bata por 1-2 minutos até ficar cremoso</li>
+                                <li>4. Prove e ajuste o mel se necessário</li>
+                                <li>5. Sirva imediatamente em um copo alto</li>
+                                <li>6. Polvilhe canela por cima se desejar</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Almoços -->
+        <section id="almoco" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span class="text-4xl mr-3">🍽️</span> Almoços Práticos (10 receitas)
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="recipe-card bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🍝 Macarrão Alho e Óleo</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 12 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 200g de macarrão (espaguete ou penne)</li>
+                                <li>• 4 dentes de alho</li>
+                                <li>• 4 colheres (sopa) de azeite</li>
+                                <li>• Queijo parmesão ralado</li>
+                                <li>• Sal a gosto</li>
+                                <li>• Pimenta vermelha (opcional)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Ferva água com sal em uma panela grande</li>
+                                <li>2. Cozinhe o macarrão conforme embalagem</li>
+                                <li>3. Descasque e corte o alho em fatias finas</li>
+                                <li>4. Aqueça o azeite em uma frigideira</li>
+                                <li>5. Doure o alho no azeite (não deixe queimar!)</li>
+                                <li>6. Escorra o macarrão e misture com o alho</li>
+                                <li>7. Sirva com parmesão e pimenta</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-yellow-50 to-amber-50 p-6 rounded-xl border border-yellow-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🥚 Omelete de Queijo</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 8 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 3 ovos</li>
+                                <li>• 50g de queijo (mussarela ou prato)</li>
+                                <li>• Sal a gosto</li>
+                                <li>• Pimenta-do-reino a gosto</li>
+                                <li>• 1 colher (sopa) de azeite ou manteiga</li>
+                                <li>• 2 colheres (sopa) de leite</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Quebre os ovos em uma tigela</li>
+                                <li>2. Adicione leite, sal e pimenta</li>
+                                <li>3. Bata bem com um garfo</li>
+                                <li>4. Corte o queijo em fatias finas</li>
+                                <li>5. Aqueça o azeite na frigideira em fogo médio</li>
+                                <li>6. Despeje os ovos batidos na frigideira</li>
+                                <li>7. Quando a base estiver firme, adicione o queijo</li>
+                                <li>8. Dobre a omelete ao meio e sirva</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl border border-red-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🍅 Salada Caprese</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 8 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 2 tomates grandes maduros</li>
+                                <li>• 150g de mussarela de búfala (ou comum)</li>
+                                <li>• 10 folhas de manjericão fresco</li>
+                                <li>• 3 colheres (sopa) de azeite extra virgem</li>
+                                <li>• 1 colher (sopa) de vinagre balsâmico</li>
+                                <li>• Sal grosso e pimenta-do-reino a gosto</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Lave bem os tomates e seque com papel toalha</li>
+                                <li>2. Corte os tomates em fatias de 1cm de espessura</li>
+                                <li>3. Corte a mussarela em fatias da mesma espessura</li>
+                                <li>4. Em um prato, intercale fatias de tomate e mussarela</li>
+                                <li>5. Lave e seque as folhas de manjericão</li>
+                                <li>6. Distribua as folhas sobre a salada</li>
+                                <li>7. Regue com azeite e vinagre balsâmico</li>
+                                <li>8. Finalize com sal grosso e pimenta</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-orange-50 to-red-50 p-6 rounded-xl border border-orange-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🍚 Arroz de Microondas</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 15 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 1 xícara de arroz branco</li>
+                                <li>• 2 xícaras de água quente</li>
+                                <li>• 1 colher (chá) de sal</li>
+                                <li>• 1 colher (sopa) de azeite ou óleo</li>
+                                <li>• 1 dente de alho picado (opcional)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Use uma tigela grande própria para microondas</li>
+                                <li>2. Lave o arroz em água corrente até sair limpa</li>
+                                <li>3. Escorra bem o arroz</li>
+                                <li>4. Na tigela, misture arroz, água quente e sal</li>
+                                <li>5. Adicione o azeite e o alho (se usar)</li>
+                                <li>6. Cubra com filme plástico próprio para micro</li>
+                                <li>7. Faça furos no filme com um garfo</li>
+                                <li>8. Microondas em potência alta por 10 minutos</li>
+                                <li>9. Deixe descansar 5 min antes de mexer</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-xl border border-purple-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🥪 Sanduíche Quente</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 8 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 4 fatias de pão de forma</li>
+                                <li>• 4 fatias de presunto</li>
+                                <li>• 2 fatias de queijo (mussarela ou prato)</li>
+                                <li>• 2 colheres (sopa) de manteiga</li>
+                                <li>• 1 tomate médio</li>
+                                <li>• Folhas de alface (opcional)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Corte o tomate em fatias de 0,5cm</li>
+                                <li>2. Passe manteiga em um lado de cada fatia de pão</li>
+                                <li>3. Vire o pão com manteiga para baixo na frigideira</li>
+                                <li>4. Coloque presunto, queijo e tomate sobre o pão</li>
+                                <li>5. Cubra com a outra fatia (manteiga para cima)</li>
+                                <li>6. Grelhe em fogo médio por 3-4 minutos</li>
+                                <li>7. Vire cuidadosamente com uma espátula</li>
+                                <li>8. Grelhe mais 2-3 min até dourar</li>
+                                <li>9. Corte na diagonal e sirva quente</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-xl border border-teal-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🐟 Salmão Grelhado</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 12 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 1 filé de salmão (150-200g)</li>
+                                <li>• Suco de 1/2 limão</li>
+                                <li>• Sal marinho a gosto</li>
+                                <li>• Pimenta-do-reino moída na hora</li>
+                                <li>• 2 colheres (sopa) de azeite</li>
+                                <li>• 1 dente de alho picado</li>
+                                <li>• Ervas frescas (dill ou salsa)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Retire o salmão da geladeira 15 min antes</li>
+                                <li>2. Seque bem o filé com papel toalha</li>
+                                <li>3. Tempere ambos os lados com sal e pimenta</li>
+                                <li>4. Regue com suco de limão e deixe 5 min</li>
+                                <li>5. Aqueça a frigideira em fogo médio-alto</li>
+                                <li>6. Adicione azeite e alho, deixe dourar</li>
+                                <li>7. Coloque o salmão com a pele para baixo</li>
+                                <li>8. Grelhe 4-5 min sem mexer</li>
+                                <li>9. Vire e grelhe mais 3-4 min</li>
+                                <li>10. Finalize com ervas e sirva</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-lime-50 to-green-50 p-6 rounded-xl border border-lime-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🥗 Salada Caesar</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 10 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 1 pé de alface americana</li>
+                                <li>• 1 xícara de croutons prontos</li>
+                                <li>• 50g de queijo parmesão ralado</li>
+                                <li>• 4 colheres (sopa) de molho caesar</li>
+                                <li>• 1 peito de frango grelhado (opcional)</li>
+                                <li>• Pimenta-do-reino a gosto</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Lave bem a alface em água corrente</li>
+                                <li>2. Seque as folhas com papel toalha ou centrífuga</li>
+                                <li>3. Rasgue as folhas em pedaços médios</li>
+                                <li>4. Coloque a alface em uma saladeira grande</li>
+                                <li>5. Se usar frango, corte em tiras</li>
+                                <li>6. Adicione o molho caesar e misture bem</li>
+                                <li>7. Acrescente os croutons</li>
+                                <li>8. Polvilhe o parmesão por cima</li>
+                                <li>9. Finalize com pimenta e sirva imediatamente</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl border border-rose-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🍖 Bife Acebolado</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 15 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 1 bife de contrafilé (200g)</li>
+                                <li>• 1 cebola grande</li>
+                                <li>• Sal grosso a gosto</li>
+                                <li>• Pimenta-do-reino moída</li>
+                                <li>• 2 colheres (sopa) de óleo</li>
+                                <li>• 1 colher (sopa) de manteiga</li>
+                                <li>• 2 dentes de alho</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Retire o bife da geladeira 20 min antes</li>
+                                <li>2. Corte a cebola em fatias médias</li>
+                                <li>3. Tempere o bife com sal e pimenta</li>
+                                <li>4. Aqueça o óleo na frigideira em fogo alto</li>
+                                <li>5. Grelhe o bife 3-4 min de cada lado</li>
+                                <li>6. Retire o bife e mantenha aquecido</li>
+                                <li>7. Na mesma frigideira, adicione a manteiga</li>
+                                <li>8. Refogue a cebola até dourar (5-6 min)</li>
+                                <li>9. Adicione alho picado no final</li>
+                                <li>10. Sirva o bife coberto com a cebola</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-indigo-50 to-blue-50 p-6 rounded-xl border border-indigo-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🍲 Sopa Instantânea</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 10 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 2 tabletes de caldo de galinha</li>
+                                <li>• 3 xícaras de água</li>
+                                <li>• 1/2 xícara de macarrão pequeno (ditalini)</li>
+                                <li>• 1 xícara de mix de vegetais congelados</li>
+                                <li>• 1 colher (chá) de alho em pó</li>
+                                <li>• Sal e pimenta a gosto</li>
+                                <li>• 1 colher (sopa) de azeite</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Ferva a água em uma panela média</li>
+                                <li>2. Dissolva os tabletes de caldo na água</li>
+                                <li>3. Adicione o macarrão e cozinhe 5 minutos</li>
+                                <li>4. Acrescente os vegetais congelados</li>
+                                <li>5. Tempere com alho em pó, sal e pimenta</li>
+                                <li>6. Cozinhe mais 3-4 minutos</li>
+                                <li>7. Prove e ajuste os temperos</li>
+                                <li>8. Finalize com azeite e sirva quente</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-emerald-50 to-teal-50 p-6 rounded-xl border border-emerald-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🌯 Wrap de Frango</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 12 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 1 tortilla grande (ou pão sírio)</li>
+                                <li>• 150g de frango desfiado temperado</li>
+                                <li>• 3 folhas de alface</li>
+                                <li>• 1 tomate pequeno</li>
+                                <li>• 2 colheres (sopa) de cream cheese</li>
+                                <li>• 1 colher (sopa) de molho de sua preferência</li>
+                                <li>• Cenoura ralada (opcional)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Aqueça a tortilla no microondas por 20 segundos</li>
+                                <li>2. Espalhe o cream cheese por toda a tortilla</li>
+                                <li>3. Corte o tomate em fatias finas</li>
+                                <li>4. Coloque alface, tomate e cenoura em uma linha</li>
+                                <li>5. Adicione o frango desfiado por cima</li>
+                                <li>6. Regue com o molho de sua escolha</li>
+                                <li>7. Enrole bem apertado, começando pela base</li>
+                                <li>8. Corte ao meio na diagonal</li>
+                                <li>9. Sirva imediatamente ou embrulhe</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lanches -->
+        <section id="lanches" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span class="text-4xl mr-3">🍿</span> Lanches e Snacks Rápidos (5 receitas)
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="recipe-card bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-xl border border-yellow-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🧀 Queijo Quente</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 6 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 2 fatias de pão de forma</li>
+                                <li>• 2 fatias de queijo (mussarela ou prato)</li>
+                                <li>• 1 colher (sopa) de manteiga</li>
+                                <li>• Orégano a gosto (opcional)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Coloque o queijo entre as fatias de pão</li>
+                                <li>2. Passe manteiga na parte externa do pão</li>
+                                <li>3. Aqueça a frigideira em fogo médio</li>
+                                <li>4. Grelhe 2-3 min de cada lado</li>
+                                <li>5. Vire quando dourar bem</li>
+                                <li>6. Sirva quente e crocante</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-green-50 to-lime-50 p-6 rounded-xl border border-green-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🥨 Biscoito Temperado</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 5 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 6 biscoitos cream cracker</li>
+                                <li>• 3 colheres (sopa) de requeijão</li>
+                                <li>• Orégano a gosto</li>
+                                <li>• Tomate cereja (opcional)</li>
+                                <li>• Pimenta-do-reino</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Espalhe requeijão sobre cada biscoito</li>
+                                <li>2. Polvilhe orégano por cima</li>
+                                <li>3. Se usar tomate, corte em fatias finas</li>
+                                <li>4. Coloque sobre o requeijão</li>
+                                <li>5. Finalize com pimenta-do-reino</li>
+                                <li>6. Sirva imediatamente</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🍌 Banana Doce</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 5 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 1 banana madura</li>
+                                <li>• 1 colher (chá) de canela em pó</li>
+                                <li>• 1 colher (sopa) de mel</li>
+                                <li>• Granola (opcional)</li>
+                                <li>• Castanhas picadas (opcional)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Descasque e corte a banana em rodelas</li>
+                                <li>2. Arrume as rodelas em um prato</li>
+                                <li>3. Regue com mel por toda a banana</li>
+                                <li>4. Polvilhe canela uniformemente</li>
+                                <li>5. Adicione granola e castanhas se desejar</li>
+                                <li>6. Sirva como lanche saudável</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-xl border border-red-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🍅 Bruschetta Simples</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 10 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 4 fatias de pão italiano</li>
+                                <li>• 2 tomates maduros</li>
+                                <li>• 6 folhas de manjericão</li>
+                                <li>• 3 colheres (sopa) de azeite</li>
+                                <li>• 2 dentes de alho</li>
+                                <li>• Sal a gosto</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Torre as fatias de pão até dourar</li>
+                                <li>2. Esfregue alho nas fatias ainda quentes</li>
+                                <li>3. Corte tomates em cubos pequenos</li>
+                                <li>4. Tempere tomates com sal e azeite</li>
+                                <li>5. Pique o manjericão grosseiramente</li>
+                                <li>6. Misture manjericão aos tomates</li>
+                                <li>7. Coloque a mistura sobre o pão</li>
+                                <li>8. Sirva imediatamente</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🥜 Mix Temperado</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 5 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 1 xícara de castanhas mistas</li>
+                                <li>• 1 colher (chá) de sal</li>
+                                <li>• 1 colher (chá) de páprica doce</li>
+                                <li>• 1 colher (sopa) de azeite</li>
+                                <li>• Alecrim seco (opcional)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Aqueça uma frigideira sem óleo</li>
+                                <li>2. Torre as castanhas por 2-3 minutos</li>
+                                <li>3. Adicione azeite e misture bem</li>
+                                <li>4. Tempere com sal e páprica</li>
+                                <li>5. Acrescente alecrim se usar</li>
+                                <li>6. Misture até temperos grudarem</li>
+                                <li>7. Deixe esfriar e sirva</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Jantares -->
+        <section id="jantar" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span class="text-4xl mr-3">🌙</span> Jantares Leves (5 receitas)
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="recipe-card bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🥗 Salada Verde Completa</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 8 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 2 xícaras de mix de folhas verdes</li>
+                                <li>• 10 tomates cereja</li>
+                                <li>• 1/2 pepino</li>
+                                <li>• 3 colheres (sopa) de azeite</li>
+                                <li>• Suco de 1/2 limão</li>
+                                <li>• Sal e pimenta a gosto</li>
+                                <li>• Queijo branco em cubos (opcional)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Lave bem as folhas em água corrente</li>
+                                <li>2. Seque com papel toalha ou centrífuga</li>
+                                <li>3. Corte os tomates cereja ao meio</li>
+                                <li>4. Descasque e corte o pepino em fatias</li>
+                                <li>5. Misture tudo em uma saladeira</li>
+                                <li>6. Tempere com azeite, limão, sal e pimenta</li>
+                                <li>7. Adicione queijo se desejar</li>
+                                <li>8. Sirva imediatamente</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-yellow-50 to-amber-50 p-6 rounded-xl border border-yellow-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🍲 Canja Express</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 15 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 3 xícaras de caldo de galinha pronto</li>
+                                <li>• 1/2 xícara de arroz</li>
+                                <li>• 1 xícara de frango desfiado</li>
+                                <li>• 1 cenoura pequena</li>
+                                <li>• Sal e pimenta a gosto</li>
+                                <li>• Salsinha picada</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Descasque e corte a cenoura em cubinhos</li>
+                                <li>2. Ferva o caldo em uma panela média</li>
+                                <li>3. Adicione o arroz e cozinhe 8 minutos</li>
+                                <li>4. Acrescente a cenoura e cozinhe 5 min</li>
+                                <li>5. Adicione o frango desfiado</li>
+                                <li>6. Tempere com sal e pimenta</li>
+                                <li>7. Finalize com salsinha picada</li>
+                                <li>8. Sirva bem quente</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-xl border border-purple-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🥣 Sopa de Tomate Cremosa</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 12 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 1 lata de molho de tomate (340g)</li>
+                                <li>• 2 xícaras de caldo de legumes</li>
+                                <li>• 1 colher (sopa) de manjericão seco</li>
+                                <li>• 1/2 caixinha de creme de leite</li>
+                                <li>• Sal e pimenta a gosto</li>
+                                <li>• 1 colher (chá) de açúcar</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Aqueça o molho de tomate em uma panela</li>
+                                <li>2. Adicione o caldo de legumes aos poucos</li>
+                                <li>3. Tempere com manjericão, sal e pimenta</li>
+                                <li>4. Adicione açúcar para equilibrar acidez</li>
+                                <li>5. Deixe ferver por 5 minutos</li>
+                                <li>6. Retire do fogo e adicione o creme</li>
+                                <li>7. Misture bem até ficar homogêneo</li>
+                                <li>8. Sirva quente com torradas</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-xl border border-teal-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🐟 Peixe no Papillote</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 18 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 1 filé de peixe branco (150g)</li>
+                                <li>• 1 abobrinha pequena</li>
+                                <li>• 1 tomate</li>
+                                <li>• Papel alumínio</li>
+                                <li>• Azeite, sal e pimenta</li>
+                                <li>• Ervas frescas (tomilho ou dill)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Preaqueça o forno a 200°C</li>
+                                <li>2. Corte abobrinha e tomate em fatias</li>
+                                <li>3. Tempere o peixe com sal e pimenta</li>
+                                <li>4. Coloque tudo sobre papel alumínio</li>
+                                <li>5. Regue com azeite e adicione ervas</li>
+                                <li>6. Feche bem o papillote</li>
+                                <li>7. Asse por 15 minutos</li>
+                                <li>8. Sirva no próprio papel</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-rose-50 to-pink-50 p-6 rounded-xl border border-rose-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🥙 Tapioca Recheada</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 10 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 4 colheres (sopa) de goma de tapioca</li>
+                                <li>• 2 fatias de queijo</li>
+                                <li>• 2 fatias de presunto</li>
+                                <li>• 1 tomate pequeno</li>
+                                <li>• Folhas de rúcula</li>
+                                <li>• Azeite para untar</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Aqueça uma frigideira antiaderente</li>
+                                <li>2. Espalhe a goma formando um círculo</li>
+                                <li>3. Deixe cozinhar até grudar (2-3 min)</li>
+                                <li>4. Corte o tomate em fatias finas</li>
+                                <li>5. Coloque recheio em metade da tapioca</li>
+                                <li>6. Dobre ao meio como um pastel</li>
+                                <li>7. Deixe dourar mais 1 minuto</li>
+                                <li>8. Sirva quente e crocante</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobremesas -->
+        <section id="sobremesas" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span class="text-4xl mr-3">🍰</span> Sobremesas Express (5 receitas)
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="recipe-card bg-gradient-to-br from-pink-50 to-rose-50 p-6 rounded-xl border border-pink-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🍫 Mousse de Chocolate</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 5 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 1 abacate maduro</li>
+                                <li>• 3 colheres (sopa) de cacau em pó</li>
+                                <li>• 2 colheres (sopa) de mel</li>
+                                <li>• 3 colheres (sopa) de leite</li>
+                                <li>• 1 colher (chá) de essência de baunilha</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Corte o abacate ao meio e retire o caroço</li>
+                                <li>2. Retire toda a polpa com uma colher</li>
+                                <li>3. Coloque no liquidificador com todos os ingredientes</li>
+                                <li>4. Bata por 2-3 minutos até ficar cremoso</li>
+                                <li>5. Prove e ajuste o mel se necessário</li>
+                                <li>6. Sirva em tacinhas e leve à geladeira</li>
+                                <li>7. Decore com frutas ou granola</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-yellow-50 to-orange-50 p-6 rounded-xl border border-yellow-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🍌 Banana Caramelizada</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 10 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 2 bananas maduras (mas firmes)</li>
+                                <li>• 3 colheres (sopa) de açúcar</li>
+                                <li>• 1 colher (sopa) de manteiga</li>
+                                <li>• 1 colher (chá) de canela em pó</li>
+                                <li>• 2 colheres (sopa) de água</li>
+                                <li>• Sorvete de baunilha (opcional)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Descasque e corte bananas em fatias grossas</li>
+                                <li>2. Em uma frigideira, derreta o açúcar em fogo médio</li>
+                                <li>3. Mexa até formar um caramelo dourado</li>
+                                <li>4. Adicione água com cuidado (vai espirrar!)</li>
+                                <li>5. Acrescente a manteiga e misture</li>
+                                <li>6. Coloque as bananas na frigideira</li>
+                                <li>7. Polvilhe canela e cozinhe 2-3 min</li>
+                                <li>8. Sirva quente, com sorvete se desejar</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-purple-50 to-indigo-50 p-6 rounded-xl border border-purple-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🧊 Sorvete de Banana</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 5 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 2 bananas maduras congeladas</li>
+                                <li>• 3 colheres (sopa) de leite</li>
+                                <li>• 1 colher (sopa) de mel</li>
+                                <li>• 1 colher (chá) de essência de baunilha</li>
+                                <li>• Cacau em pó (opcional)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Corte as bananas congeladas em pedaços</li>
+                                <li>2. Coloque no processador ou liquidificador</li>
+                                <li>3. Adicione leite, mel e baunilha</li>
+                                <li>4. Bata até ficar cremoso (2-3 min)</li>
+                                <li>5. Pare e raspe as laterais se necessário</li>
+                                <li>6. Continue batendo até textura de sorvete</li>
+                                <li>7. Sirva imediatamente ou congele 30 min</li>
+                                <li>8. Polvilhe cacau se desejar</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🥥 Beijinho de Coco</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 15 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 1 lata de leite condensado (395g)</li>
+                                <li>• 1 xícara de coco ralado</li>
+                                <li>• 1 colher (sopa) de manteiga</li>
+                                <li>• Coco ralado para enrolar</li>
+                                <li>• Cravo-da-índia para decorar</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Em uma panela, misture leite condensado e coco</li>
+                                <li>2. Adicione a manteiga</li>
+                                <li>3. Cozinhe em fogo médio, mexendo sempre</li>
+                                <li>4. Cozinhe até desgrudar do fundo (8-10 min)</li>
+                                <li>5. Deixe esfriar completamente</li>
+                                <li>6. Faça bolinhas com as mãos untadas</li>
+                                <li>7. Passe no coco ralado</li>
+                                <li>8. Decore com cravo e sirva</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="recipe-card bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl border border-red-200">
+                        <h3 class="font-bold text-lg text-gray-800 mb-2">🍓 Morango com Chantilly</h3>
+                        <p class="text-sm text-gray-600 mb-3">⏱️ 8 minutos</p>
+                        <div class="text-sm text-gray-700 space-y-1 mb-4">
+                            <p class="font-semibold text-orange-600">Ingredientes:</p>
+                            <ul class="ml-2 space-y-1">
+                                <li>• 300g de morangos frescos</li>
+                                <li>• 1 lata de chantilly pronto</li>
+                                <li>• 2 colheres (sopa) de açúcar</li>
+                                <li>• Folhas de hortelã fresca</li>
+                                <li>• Biscoitos champagne (opcional)</li>
+                            </ul>
+                        </div>
+                        <div class="text-xs text-gray-600">
+                            <p class="font-semibold text-orange-600 mb-1">Modo de preparo:</p>
+                            <ol class="ml-2 space-y-1">
+                                <li>1. Lave bem os morangos em água corrente</li>
+                                <li>2. Retire as folhinhas verdes</li>
+                                <li>3. Corte em fatias ou deixe inteiros</li>
+                                <li>4. Polvilhe açúcar sobre os morangos</li>
+                                <li>5. Deixe descansar 5 min para soltar suco</li>
+                                <li>6. Distribua em taças ou pratos</li>
+                                <li>7. Cubra com chantilly generosamente</li>
+                                <li>8. Decore com hortelã e sirva gelado</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kit Recomendado -->
+        <section id="kit" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span class="text-4xl mr-3">🛍️</span> Kit Básico Recomendado
+                </h2>
+                <p class="text-gray-600 mb-8 text-center">Produtos testados e aprovados para facilitar sua vida na cozinha</p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Frigideira Antiaderente -->
+                    <div class="bg-gradient-to-br from-red-50 to-orange-50 p-6 rounded-xl border border-red-200 hover:shadow-lg transition-all">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">🍳</span>
+                            <h3 class="font-bold text-lg text-gray-800 mt-2">Frigideira Antiaderente</h3>
+                            <p class="text-sm text-gray-600">26-28cm • Revestimento cerâmico</p>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-700 mb-4">
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Não gruda nada</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Fácil de limpar</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Menos óleo necessário</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Ideal para ovos e carnes</p>
+                        </div>
+                        <a href="https://s.shopee.com.br/50OoCsa8Jf" target="_blank" class="block w-full bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 transition font-semibold text-center">
+                            🛒 Ver Modelos Recomendados
+                        </a>
+                    </div>
+
+                    <!-- Conjunto de Facas -->
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-200 hover:shadow-lg transition-all">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">🔪</span>
+                            <h3 class="font-bold text-lg text-gray-800 mt-2">Conjunto de Facas</h3>
+                            <p class="text-sm text-gray-600">3 peças • Aço inoxidável</p>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-700 mb-4">
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Faca do chef (20cm)</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Faca para legumes</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Faca serrilhada</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Corte preciso e seguro</p>
+                        </div>
+                        <a href="https://s.shopee.com.br/4VSXbvTUkS" target="_blank" class="block w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition font-semibold text-center">
+                            🛒 Ver Conjuntos Recomendados
+                        </a>
+                    </div>
+
+                    <!-- Tábua de Corte -->
+                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200 hover:shadow-lg transition-all">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">📋</span>
+                            <h3 class="font-bold text-lg text-gray-800 mt-2">Tábua de Corte</h3>
+                            <p class="text-sm text-gray-600">Bambu ou plástico • Antiderrapante</p>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-700 mb-4">
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Base antiderrapante</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Fácil higienização</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Não danifica as facas</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Tamanho médio (30x20cm)</p>
+                        </div>
+                        <a href="https://s.shopee.com.br/802PmTdk1q" target="_blank" class="block w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 transition font-semibold text-center">
+                            🛒 Ver Tábuas Recomendadas
+                        </a>
+                    </div>
+
+                    <!-- Jogo de Panelas -->
+                    <div class="bg-gradient-to-br from-purple-50 to-violet-50 p-6 rounded-xl border border-purple-200 hover:shadow-lg transition-all">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">🍲</span>
+                            <h3 class="font-bold text-lg text-gray-800 mt-2">Jogo de Panelas</h3>
+                            <p class="text-sm text-gray-600">3 peças • Antiaderente</p>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-700 mb-4">
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Panela pequena (16cm)</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Panela média (20cm)</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Panela grande (24cm)</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Tampas incluídas</p>
+                        </div>
+                        <a href="https://s.shopee.com.br/2B4cpnpwAL" target="_blank" class="block w-full bg-purple-500 text-white py-2 px-4 rounded-lg hover:bg-purple-600 transition font-semibold text-center">
+                            🛒 Ver Jogos Recomendados
+                        </a>
+                    </div>
+
+                    <!-- Liquidificador -->
+                    <div class="bg-gradient-to-br from-yellow-50 to-amber-50 p-6 rounded-xl border border-yellow-200 hover:shadow-lg transition-all">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">🥤</span>
+                            <h3 class="font-bold text-lg text-gray-800 mt-2">Liquidificador</h3>
+                            <p class="text-sm text-gray-600">900W • Alta potência</p>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-700 mb-4">
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Potência superior</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Copo resistente</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Fácil limpeza</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Smoothies perfeitos</p>
+                        </div>
+                        <a href="https://s.shopee.com.br/4AphDZG3Fw" target="_blank" class="block w-full bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600 transition font-semibold text-center">
+                            🛒 Ver Modelos Recomendados
+                        </a>
+                    </div>
+
+                    <!-- Kit de Utensílios -->
+                    <div class="bg-gradient-to-br from-teal-50 to-cyan-50 p-6 rounded-xl border border-teal-200 hover:shadow-lg transition-all">
+                        <div class="text-center mb-4">
+                            <span class="text-4xl">🥄</span>
+                            <h3 class="font-bold text-lg text-gray-800 mt-2">Kit de Utensílios</h3>
+                            <p class="text-sm text-gray-600">Silicone • Resistente ao calor</p>
+                        </div>
+                        <div class="space-y-2 text-sm text-gray-700 mb-4">
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Espátula flexível</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Colher de pau</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Escumadeira</p>
+                            <p class="flex items-center"><span class="text-green-500 mr-2">✓</span> Não risca panelas</p>
+                        </div>
+                        <a href="https://s.shopee.com.br/7pizaXVdSl" target="_blank" class="block w-full bg-teal-500 text-white py-2 px-4 rounded-lg hover:bg-teal-600 transition font-semibold text-center">
+                            🛒 Ver Kits Recomendados
+                        </a>
+                    </div>
+                </div>
+
+
+
+                <!-- Por que estes produtos -->
+                <div class="mt-8 bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">🎯 Por que Recomendamos Estes Produtos?</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">✅ Critérios de Seleção:</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Testados na prática</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Boa relação custo-benefício</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Durabilidade comprovada</li>
+                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Fáceis de encontrar</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800 mb-3">🎁 Benefícios Extras:</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li class="flex items-center"><span class="text-blue-500 mr-2">•</span> Links para melhores ofertas</li>
+                                <li class="flex items-center"><span class="text-blue-500 mr-2">•</span> Comparação de preços</li>
+                                <li class="flex items-center"><span class="text-blue-500 mr-2">•</span> Reviews de usuários reais</li>
+                                <li class="flex items-center"><span class="text-blue-500 mr-2">•</span> Garantia do fabricante</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dicas -->
+        <section id="dicas" class="mb-16">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <span class="text-4xl mr-3">💡</span> Dicas de Conservação e Reaproveitamento
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-orange-600 mb-4">🧊 Conservação</h3>
+                        <div class="space-y-4">
+                            <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                                <h4 class="font-semibold text-gray-800 mb-2">Geladeira</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Sobras: 3-4 dias</li>
+                                    <li>• Vegetais cortados: 2-3 dias</li>
+                                    <li>• Carnes cozidas: 3-4 dias</li>
+                                </ul>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                                <h4 class="font-semibold text-gray-800 mb-2">Freezer</h4>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Sopas e caldos: 3 meses</li>
+                                    <li>• Carnes cozidas: 2-3 meses</li>
+                                    <li>• Pães: 3 meses</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-green-600 mb-4">♻️ Reaproveitamento</h3>
+                        <div class="space-y-4">
+                            <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                                <h4 class="font-semibold text-gray-800 mb-2">Sobras de Arroz</h4>
+                                <p class="text-sm text-gray-600">Faça arroz frito, bolinhos ou risotto</p>
+                            </div>
+                            <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                                <h4 class="font-semibold text-gray-800 mb-2">Pão Duro</h4>
+                                <p class="text-sm text-gray-600">Torradas, farinha de rosca ou pudim</p>
+                            </div>
+                            <div class="bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+                                <h4 class="font-semibold text-gray-800 mb-2">Vegetais Murchos</h4>
+                                <p class="text-sm text-gray-600">Sopas, caldos ou refogados</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-gradient-to-r from-orange-100 to-red-100 p-6 rounded-xl">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">🎯 Dicas Extras para Economizar Tempo</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Prepare ingredientes no domingo</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Use temperos prontos</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Congele porções individuais</li>
+                        </ul>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Tenha sempre ovos em casa</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Use vegetais congelados</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Invista em panelas antiaderentes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-orange-500 to-red-500 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-2xl font-bold mb-4">🎉 Parabéns!</h3>
+            <p class="text-lg mb-4">Agora você tem 30 receitas rápidas para transformar sua rotina!</p>
+            <p class="opacity-90">Lembre-se: a prática leva à perfeição. Comece com as receitas mais simples e vá evoluindo!</p>
+            <div class="mt-6 text-sm opacity-75">
+                <p>💡 Dica: Salve este ebook nos seus favoritos para consultar sempre que precisar!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Add smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to recipe cards
+            const recipeCards = document.querySelectorAll('.recipe-card');
+            recipeCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px)';
+                    this.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '';
+                });
+            });
+
+            // Highlight active navigation
+            const navButtons = document.querySelectorAll('nav button');
+            const sections = document.querySelectorAll('section');
+            
+            function highlightActiveSection() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 100;
+                    if (window.pageYOffset >= sectionTop) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navButtons.forEach(button => {
+                    button.classList.remove('bg-orange-500', 'text-white');
+                    button.classList.add('bg-orange-100', 'text-orange-700');
+                    
+                    if (button.getAttribute('onclick').includes(current)) {
+                        button.classList.remove('bg-orange-100', 'text-orange-700');
+                        button.classList.add('bg-orange-500', 'text-white');
+                    }
+                });
+            }
+            
+            window.addEventListener('scroll', highlightActiveSection);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96dd4f506752e126',t:'MTc1NDk3Mzc4NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
